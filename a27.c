@@ -4,7 +4,7 @@
 
 int main(){
     int n;
-    printf("enter a number");
+    printf("enter a natural number");
     scanf("%d", &n);
     for(int i=2; i<sqrt(n); i++){
         if(n%i==0){
