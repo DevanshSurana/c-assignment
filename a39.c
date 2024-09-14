@@ -1,4 +1,4 @@
-//PROGRAM TO PRfloat 1/1!+2/2!+3/3!+4/4!,.........N.
+//PROGRAM TO print float 1/1!+2/2!+3/3!+4/4!,.........N.
 #include<stdio.h>
 
 float fact(int n);
