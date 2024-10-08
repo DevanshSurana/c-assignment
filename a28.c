@@ -25,11 +25,11 @@ int main(){
     else{
     printf("not armstrong\n");
     }
-     printf("%d\n", orgn);
-     printf("%d", a);
+    //  printf("%d\n", orgn);
+    //  printf("%d", a);
 
-     float c=5;
-      printf("%d\n", (int)pow(c,3));
+    //  float c=5;
+    //   printf("%d\n", (int)pow(c,3));
 
 
    
