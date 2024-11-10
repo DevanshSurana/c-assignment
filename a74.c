@@ -1,6 +1,6 @@
-/*Given are one dimensional a3ays A and B which are sorted in ascending order.
-Write a program to merge them into a single sorted a3ay C that contains every
-item form a3ay A and B, in ascending order.*/
+/*Given are one dimensional arrays A and B which are sorted in ascending order.
+Write a program to merge them into a single sorted array C that contains every
+item form array A and B, in ascending order.*/
 #include<stdio.h>
 
 
@@ -67,7 +67,7 @@ int main()
 
      
 
-    //sorting the merged array by bubble sort
+    //sorting the merged array by selection sort
 
     for(int i=0; i<n3-1; i++)
     {

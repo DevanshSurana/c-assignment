@@ -20,7 +20,6 @@ int main(){
         scanf("%d" "%d", &a, &b);
         printf("%d",a-b);
         break;
-
         case 'c':
         printf("enter 2 number to multiply\n");
         scanf("%d" "%d", &a, &b);
@@ -32,6 +31,8 @@ int main(){
         scanf("%d" "%d", &a, &b);
         printf("%d",a/b);
         break;
+        default :
+        printf("oops enterd something wrong");
     }
     
    

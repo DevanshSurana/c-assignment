@@ -1,11 +1,12 @@
 #include<stdio.h>
-#define add_six(x) x+6
+#include<string.h>
 
 
-float f(n)
-{
-    return 2*n;
-}
+
+// float f(n)
+// {
+//     return 2*n;
+// }
 
 int main(){
     // int i=5;
@@ -22,7 +23,9 @@ int main(){
     // int x=j<<2;
     // printf("%d", x);
 
-    float x=2.3;
-    printf("%f", f(x));
+    // float x=2.3;
+    // printf("%f", f(x));
+
+    
 
 }

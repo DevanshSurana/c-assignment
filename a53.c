@@ -37,7 +37,7 @@ int main()
         
     }
 
-    for(int i=n; i>=1; i--)
+    for(int i=n-1; i>=1; i--)
     {
         for(int l=n-i; l>=1; l--)
         {

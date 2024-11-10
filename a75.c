@@ -1,3 +1,5 @@
+//The annual examination results of 10 students are tabulated as follows:
+// roll no.     sub1   sub2    sub3
 #include<stdio.h>
 #include<math.h>
 
