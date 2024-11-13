@@ -1,3 +1,6 @@
+/*FINFING DIGITS
+Input format
+The first line contains T (number of test cases followed by T lines each containing N).*/
 #include<stdio.h>
 
 
@@ -16,7 +19,7 @@ int main()
         {
             int lastdigit=n%10;
             n=n/10;
-            if(orgn%lastdigit==0)
+            if(orgn%lastdigit==0&&lastdigit!=0)
             {
                 counter++;
             }

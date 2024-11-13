@@ -1,28 +1,7 @@
-#include<stdio.h>
-
-
-// void inputarr(int n, int arr)
-// {
-//     for(int i=0; i<n; i++)
-//     {
-//         scanf("%d", &arr[i]);
-        
-        
-//     }
-// }
-
-// int max_arr(int n, int arr[])
-// {
-    
-//     int max=2147483647;
-
-    
-//     printf("%d", max);
-//     if(max<arr[i])
-//         {
-//             max=arr[i];
-//         }
-
-    
-    
-// }
+for(int i=0; i<26; i++)
+    // {
+    //     for(int j=0; j<t; j++)
+    //     {
+    //         alphabets[i][t+1]+=alphabets[i][j];
+    //     }
+    // }

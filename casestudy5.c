@@ -1,7 +1,13 @@
+/*ISFIBO
+Input Format
+The first line contains T, number of test cases.
+T lines follows. Each line contains an integer N.
+*/
+
 #include<stdio.h>
 #include<math.h>
 #include<stdbool.h>
-
+//function for checking a nuber is perfect square or not which returns bool
 bool isPerfectSquare(int x)
 {
     int s=sqrt(x);

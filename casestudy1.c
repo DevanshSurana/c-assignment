@@ -1,5 +1,9 @@
+/*Bigger is Greater
+Input Format
+The first line of input contains , number of test cases. Each of the next lines contains .*/
 #include<stdio.h>
 #include<string.h>
+
 
 
 int main()
@@ -20,7 +24,7 @@ int main()
         
 
         
-        
+        //checking from last if any char is smaller than its left character & swapping them       
         for(int j=len-1; j>=0; j--)
         {
             flag=0;

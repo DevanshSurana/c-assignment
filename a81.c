@@ -1,4 +1,5 @@
-/**/
+/*WRITE A FUNCTION THAT RETURN 1 IF ITS ARGUMENT IS PRIME NUMBER AND RETURN
+ZERO OTHERWISE.*/
 
 #include<stdio.h>
 #include<math.h>
