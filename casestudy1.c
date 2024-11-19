@@ -9,7 +9,7 @@ The first line of input contains , number of test cases. Each of the next lines 
 int main()
 {
     int t;
-    scanf("%d\n", &t);
+    scanf("%d", &t);
     
 
     for(int i=1; i<=t; i++)
@@ -17,8 +17,8 @@ int main()
         
         char word[100];
         // printf("enter your word: ");
-        fgets(word,100,stdin);
-        
+        // fgets(word,100,stdin);
+        scanf("%s", &word);
         int len=strlen(word)-1;
         int flag;
         
