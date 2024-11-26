@@ -3,71 +3,91 @@ MEMORY ALLOCATION.*/
 
 
 #include<stdio.h>
+#include<stdlib.h>
 
 
 int main()
 {
-    int m1[2][2];
-    int m2[2][2];
-    int *matrix1[2]=m1[0][0];
-    int *matrix2[2]=m2[0][0];
-    int *ans[2];
+    printf("enter dimensions of first and second matrix");
+    int l,m,n;
+    //memory allocation of rows
+    scanf("%d %d %d",&l, &m, &n);
+    int **m1, **m2, **ans;
+    m1=(int **)malloc(l*sizeof(int *));
+    m2=(int **)malloc(m*sizeof(int *));
+    ans=(int **)malloc(l*sizeof(int *));
+    //memory allocation of columns of each rows
+    for(int i=0; i<l; i++)
+    m1[i]=(int *)malloc(m*sizeof(int));
+    for(int i=0; i<m; i++)
+    m2[i]=(int *)malloc(n*sizeof(int));
+    for(int i=0; i<l; i++)
+    ans[i]=(int *)malloc(n*sizeof(int));
 
-    
-    for(int i=0; i<2; i++)
+    //inputing elements of first matrix
+    for(int i=0; i<l; i++)
     {
-        for(int j=0; j<2; j++)
+        for(int j=0; j<m; j++)
         {
-            scanf("%d", &m1[i][j]);
             
+            printf("enter a%d%d element of first matrix",i,j);
+            scanf("%d", &m1[i][j]);
         }
     }
-    for(int i=0; i<2; i++)
+    //inputting elements of second matrix
+    for(int i=0; i<m; i++)
     {
-        for(int j=0; j<2; j++)
+        for(int j=0; j<n; j++)
         {
+            printf("enter a%d%d element of second  matrix",i,j);
             scanf("%d", &m2[i][j]);
             
         }
     }
 
-    for(int i=0; i<2; i++)
+    //intialising ans matrix to zero
+    for(int i=0; i<l; i++)
     {
-        for(int j=0; j<2; j++)
+        for(int j=0; j<n; j++)
         {
-            printf("%d",matrix1[i][j]);
-        }
-    }for(int i=0; i<2; i++)
-    {
-        for(int j=0; j<2; j++)
-        {
-            printf("%d",matrix2[i][j]);
+            ans[i][j]=0;
         }
     }
 
 
-    // for(int i=0; i<2; i++)
-    // {
-    //     for(int j=0; j<2; j++)
-    //     {
-    //         for(int k=0; k<2; k++)
-    //         {
-    //             ans[i][j]+=matrix1[i][k]*matrix2[k][j];
-    //         }
-    //     }
-    // }
+    //matrix multiplication
+    for(int i=0; i<l; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            for(int k=0; k<m; k++)
+            {
+                ans[i][j]+=m1[i][k]*m2[k][j];
+            }
+        }
+    }
 
-    // for(int i=0; i<2; i++)
-    // {
-    //     for(int j=0; j<2; j++)
-    //     {
-    //         printf("%d",ans[i][j]);
-    //     }
-    // }
+    //output ans matrix
+    for(int i=0; i<l; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            printf("%d  ", ans[i][j]);
+        }
+        printf("\n");
+    }
 
-    // scanf("%d", &matrix1[1][0]);
-    // printf("%d", matrix1[1][0]);
-
-
+    //freeing up columns
+    for(int i=0; i<l; i++)
+    free(m1[i]);
+    for(int i=0; i<m; i++)
+    free(m2[i]);
+    for(int i=0; i<l; i++)
+    free(ans[i]);
+    //freeing up rows
+    free(m1);
+    free(m2);
+    free(ans);
+    
     return 0;
 }

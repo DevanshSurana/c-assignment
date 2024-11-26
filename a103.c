@@ -11,6 +11,8 @@ int main()
     printf("enter two numbers");
     scanf("%d %d", &x, &y);
 
+    printf("max of two numbers is %d", MAX(x,y));
+
     
 
     return 0;
