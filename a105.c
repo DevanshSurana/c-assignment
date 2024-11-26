@@ -2,6 +2,7 @@
 THE PERMUTATIONS*/
 
 #include<stdio.h>
+#include<string.h>
 
 void swap(char *p, char *q)
 {
@@ -11,18 +12,37 @@ void swap(char *p, char *q)
 
 }
 
+void permutation(char *s, int x, int y )
+{
+    if(x==y)
+    {
+        printf("%s\n",s);
+    }
+    else
+    {
+        for(int i=x; i<=y; i++)
+        {
+            swap((s+x),(s+i));
+            permutation(s,x+1,y);
+            swap((s+x),(s+i));
+        }
+    }
+}
+
 
 int main()
 {
+    char str[10];
+    printf("enter the string");
     int n;
-    printf("enter the length of the string");
-    scanf("%d", &n);
-    fflush(stdin);
+    scanf("%s", &str);
+    n=strlen(str);
+    printf("all permutation of given string are\n");
+    permutation(str,0,n-1);
+    
 
-    char string[n+1];
-    fgets(string,n+1,stdin);
 
-    // printf("%s", string);
+
     
     return 0;
 }
